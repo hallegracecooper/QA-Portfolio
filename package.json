@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "test": "npx playwright test --pass-with-no-tests",
+  "test:ui": "npx playwright test --ui",
+  "report": "npx playwright show-report"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hallegracecooper/QA-Portfolio.git"
