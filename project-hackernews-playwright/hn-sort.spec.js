@@ -1,4 +1,6 @@
-const { chromium } = require("playwright");
+import { chromium } from 'playwright';
+
+process.env.PLAYWRIGHT_BROWSERS_PATH = '0';
 
 async function sortHackerNewsArticles() {
   const browser = await chromium.launch({ headless: true });
@@ -8,7 +10,9 @@ async function sortHackerNewsArticles() {
   console.log("Navigating to Hacker News...");
   await page.goto("https://news.ycombinator.com/newest");
 
-  // Get article age text like "1 minute ago", "2 hours ago"
+  // Wait until at least one article timestamp is loaded
+  await page.waitForSelector('.subtext > span.age');
+
   const articles = await page.locator('.subtext > span.age').allTextContents();
 
   if (articles.length < 100) {
@@ -17,7 +21,6 @@ async function sortHackerNewsArticles() {
     return;
   }
 
-  // Convert relative time strings into number of seconds
   const timeInSeconds = articles.map(time => {
     const [value, unit] = time.split(" ");
     const num = parseInt(value);
@@ -25,10 +28,9 @@ async function sortHackerNewsArticles() {
     if (unit.startsWith("hour")) return num * 3600;
     if (unit.startsWith("day")) return num * 86400;
     if (unit.startsWith("second")) return num;
-    return Number.MAX_SAFE_INTEGER; // fallback
+    return Number.MAX_SAFE_INTEGER;
   });
 
-  // Check if list is sorted (newest = smallest number of seconds)
   let isSorted = true;
   for (let i = 0; i < timeInSeconds.length - 1; i++) {
     if (timeInSeconds[i] > timeInSeconds[i + 1]) {
@@ -47,6 +49,4 @@ async function sortHackerNewsArticles() {
   await browser.close();
 }
 
-(async () => {
-  await sortHackerNewsArticles();
-})();
+sortHackerNewsArticles();
