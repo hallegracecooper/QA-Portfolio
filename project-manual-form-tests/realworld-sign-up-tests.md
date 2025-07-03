@@ -14,7 +14,7 @@
 5. Click the "Sign in" button
 
 **Expected Result:** User is redirected to their new account dashboard.  
-**Actual Result:**  User is stuck on the register page, all fields still have the information input.
+**Actual Result:**  User is left on the register page, all fields still have the information input.
 **Status:**  FAILED
 
 
@@ -30,13 +30,13 @@
 **Steps:**
 1. Go to https://demo.realworld.io/#/register
 2. Enter "JacobBlacktheWolf" in the username field
-2. Enter "Hallegracecooper@gmail.com" in the email field
-3. Enter "3!@qWgB/y?r*!JW" in the password field
-4. Click the "Sign in" button
+3. Enter "Hallegracecooper@gmail.com" in the email field
+4. Enter "3!@qWgB/y?r*!JW" in the password field
+5. Click the "Sign in" button
 
 **Expected Result:** User is denied account with a notification that reads that the email is already in use. 
-**Actual Result:**  
-**Status:** 
+**Actual Result:**  User is left on the register page, there is no apparent and clear notification of failed entry due to reused email address. 
+**Status:** FAILED
 
 
 
@@ -51,13 +51,13 @@
 **Steps:**
 1. Go to https://demo.realworld.io/#/register
 2. Enter "Hallegracecooper" in the username field
-2. Enter "JacobBlacktheWolf@gmail.com" in the email field
-3. Enter "3!@qWgB/y?r*!JW" in the password field
-4. Click the "Sign in" button
+3. Enter "JacobBlacktheWolf@gmail.com" in the email field
+4. Enter "3!@qWgB/y?r*!JW" in the password field
+5. Click the "Sign in" button
 
 **Expected Result:** User is denied account with a notification that reads that the username is already in use. 
-**Actual Result:**  
-**Status:** 
+**Actual Result:**  User is left on the register page, there is no apparent and clear notification of failed entry due to reused username. 
+**Status:** FAILED
 
 
 
@@ -72,10 +72,10 @@
 **Steps:**
 1. Go to https://demo.realworld.io/#/register
 2. Enter "JacobBlacktheWolf" in the username field
-2. Enter "JacobBlacktheWolf@gmail.com" in the email field
-3. Enter "1234556!" in the password field
-4. Click the "Sign in" button
+3. Enter "JacobBlacktheWolf@gmail.com" in the email field
+4. Enter "1234556!" in the password field
+5. Click the "Sign in" button
 
 **Expected Result:** User is denied account with a notification that reads that the password does not meet complexity requirements.
-**Actual Result:**  
-**Status:** 
+**Actual Result:**   User is left on the register page, there is no apparent and clear notification of failed entry due to the password not following the guidelines.
+**Status:** FAILED
