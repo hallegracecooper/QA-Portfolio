@@ -7,9 +7,9 @@
 3. Enter "3!@qWgB/y?r*!JW" in the password field
 4. Click the "Sign in" button
 
-**Expected Result:** User is redirected to their account dashboard.  
-**Actual Result:**  
-**Status:** 
+**Expected Result:** User is redirected to their account dashboard, account username showing on the top of page confirming login.   
+**Actual Result:**  User is not redirected to dashboard, left on the login page, appears that nothing has happened. 
+**Status:** FAILED
 
 
 
@@ -23,8 +23,9 @@
 4. Click the "Sign in" button
 
 **Expected Result:** User is denied login, notification reads that password is missing.
-**Actual Result:**  
-**Status:** 
+**Actual Result:**  User is left on the Login page, there is no indication or clear message of failing the login due to empty password field. 
+
+**Status:** FAILED
 
 
 
@@ -38,8 +39,8 @@
 4. Click the "Sign in" button
 
 **Expected Result:** User is denied login, notification reads that email is missing.
-**Actual Result:**  
-**Status:** 
+**Actual Result:**  User is left on the Login page, there is no indication or clear message of failing the login due to empty email field.
+**Status:** FAILED
 
 
 
@@ -53,8 +54,8 @@
 4. Click the "Sign in" button
 
 **Expected Result:** User is denied login, notification reads that email is not recognized or incorrect.
-**Actual Result:**  
-**Status:** 
+**Actual Result:**  User is left on the Login page, there is no indication or clear message of failing the login due to incorrect email field.
+**Status:** FAILED
 
 
 
@@ -68,5 +69,5 @@
 4. Click the "Sign in" button
 
 **Expected Result:** User is denied login, notification reads that password is incorrect.
-**Actual Result:**  
-**Status:**
+**Actual Result:**  User is left on the Login page, there is no indication or clear message of failing the login due to incorrect password field.
+**Status:** FAILED
