@@ -1,0 +1,34 @@
+{
+	"info": {
+		"_postman_id": "e7f12bf9-1e55-4e39-9845-e6b84dbfd57c",
+		"name": "reqres-api-tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41739135"
+	},
+	"item": [
+		{
+			"name": "POST Create User",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "POST Register User - Invalid",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GET Single User",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
