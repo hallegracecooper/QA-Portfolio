@@ -1,7 +1,7 @@
 import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
-  testDir: '.',               // we'll narrow this later
+  testDir: './project-hackernews-playwright/tests',              
   reporter: [['list'], ['html', { outputFolder: 'playwright-report' }]],
   use: {
     headless: true,
